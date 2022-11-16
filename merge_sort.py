@@ -6,9 +6,9 @@ def merge_sort(arr):
  
         R = arr[mid:]
  
-        mergeSort(L)
+        merge_sort(L)
 
-        mergeSort(R)
+        merge_sort(R)
  
         i = j = k = 0
 
