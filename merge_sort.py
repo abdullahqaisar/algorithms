@@ -11,12 +11,28 @@ def merge_sort(arr):
         merge_sort(R)
         i = j = k = 0
 
-        if (i < len(L)) and (j < len(R)):
-            pass
+        while (i < len(L)) and (j < len(R)):
+            if (L[i] > R[j]):
+                arr[k] = R[j]
+                j += 1
+            else:
+                arr[k] = L[i]
+                i += 1
+            k += 1
+
+        while i < len(L):
+            arr[k] = L[i]
+            i += 1
+            k += 1
+        while j < len(R):
+            arr[k] = R[j]
+            j += 1
+            k += 1
 
 
-arr = [1, 20, 51, 2, 9, 10]
+arr = [2121, 20, 51, 2, 9, 10]
 merge_sort(arr)
+print(arr)
 
 
 # arr = [100, 20, 51, 2, 9, 10]
